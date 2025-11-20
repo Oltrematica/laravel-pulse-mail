@@ -1,0 +1,43 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Cannot access property \$count on object\|null\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: tests/Feature/MailSentWidgetTest.php
+
+		-
+			message: '#^Cannot access property \$mailable on object\|null\.$#'
+			identifier: property.nonObject
+			count: 3
+			path: tests/Feature/MailSentWidgetTest.php
+
+		-
+			message: '#^Cannot access property \$status on object\|null\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: tests/Feature/MailSentWidgetTest.php
+
+		-
+			message: '#^Cannot access property \$subject on object\|null\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: tests/Feature/MailSentWidgetTest.php
+
+		-
+			message: '#^Cannot access property \$to on object\|null\.$#'
+			identifier: property.nonObject
+			count: 3
+			path: tests/Feature/MailSentWidgetTest.php
+
+		-
+			message: '#^Unable to resolve the template type TAndValue in call to method Pest\\Expectation\<mixed\>\:\:and\(\)$#'
+			identifier: argument.templateType
+			count: 6
+			path: tests/Feature/MailSentWidgetTest.php
+
+		-
+			message: '#^Unable to resolve the template type TValue in call to function expect$#'
+			identifier: argument.templateType
+			count: 5
+			path: tests/Feature/MailSentWidgetTest.php
