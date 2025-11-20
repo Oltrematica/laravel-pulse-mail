@@ -176,6 +176,38 @@ For high-volume applications, you can track only a percentage of emails:
 'sample_rate' => env('PULSE_MAIL_SAMPLE_RATE', 1),
 ```
 
+### Viewing Emails in Real-Time
+
+Laravel Pulse uses an ingest system that processes recorded data asynchronously. After sending emails, you need to run the Pulse ingest process to see them in the dashboard:
+
+**Option 1: Manual Ingest (Development)**
+
+Run this command to process pending data once:
+
+```bash
+php artisan pulse:check
+```
+
+**Option 2: Automatic Ingest (Recommended)**
+
+Run the Pulse worker in the background to automatically process data:
+
+```bash
+php artisan pulse:work
+```
+
+For development environments, add `pulse:work` to your concurrent processes. For example, if using `concurrently` in your `composer dev` script:
+
+```json
+"dev": [
+    "npx concurrently \"php artisan serve\" \"php artisan queue:listen\" \"php artisan pulse:work\" \"npm run dev\""
+]
+```
+
+**Option 3: Production Setup**
+
+In production, configure a supervisor process to keep `pulse:work` running continuously. See the [Laravel Pulse documentation](https://laravel.com/docs/pulse#running-the-pulse-worker) for details.
+
 ## Code Quality
 
 The project includes automated tests and tools for code quality control.
