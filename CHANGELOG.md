@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-tooklkit` will be documented in this file.
 
+## v0.2.0 - 2026-03-18
+
+### What's Changed
+
+* feat: add Laravel 13 support by @mirchaemanuel in https://github.com/Oltrematica/laravel-pulse-mail/pull/8
+
+**Full Changelog**: https://github.com/Oltrematica/laravel-pulse-mail/compare/v0.1.1...v0.2.0
+
 ## v0.1.2 - 2025-05-20
 
 **Full Changelog**: https://github.com/Oltrematica/laravel-pulse-mail/compare/v0.1.1...v0.1.2
